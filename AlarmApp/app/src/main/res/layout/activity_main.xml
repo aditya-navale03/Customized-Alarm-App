@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:text="Alarm"
+        android:textSize="42sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/menuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⋮"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/title"
+        android:padding="8dp"/>
+
+    <!-- FIX: single unique ID -->
+    <TextView
+        android:id="@+id/ringIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ring in 10 hours 22 minutes"
+        android:textColor="#AAAAAA"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_below="@id/title"
+        android:layout_marginTop="40dp"/>
+
+    <!-- FIX: RecyclerView for dynamic alarm list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/alarmList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ringIn"
+        android:layout_above="@id/addAlarmBtn"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/addAlarmBtn"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:text="+"
+        android:textSize="32sp"
+        android:background="@drawable/round_button"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"/>
+
+</RelativeLayout>
